@@ -18,28 +18,42 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs"
 
+
 export function TabsDemo() {
   return (
-    <div className="flex w-full max-w-sm flex-col gap-6">
-      <Tabs defaultValue="account">
+    <div className="flex w-full flex-col gap-6">
+      <Tabs defaultValue="1">
         <TabsList>
-          <TabsTrigger value="account">Account</TabsTrigger>
-          <TabsTrigger value="password">Password</TabsTrigger>
+          <TabsTrigger value="1">Programm page</TabsTrigger>
+          <TabsTrigger value="2">Programmspeicher</TabsTrigger>
         </TabsList>
-        <TabsContent value="account">
+        <TabsContent value="1">
           <Card>
-            <CardHeader>
-              <CardTitle>Account</CardTitle>
-              <CardDescription>
-                Make changes to your account here. Click save when you&apos;re
-                done.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="grid gap-6">
-              <div className="grid gap-3">
-                <Label htmlFor="tabs-demo-name">Name</Label>
-                <Input id="tabs-demo-name" defaultValue="Pedro Duarte" />
+            <CardContent className="grid grid-cols-12 gap-1">
+            <div className="grid col-span-2">
+              <div className="border-2 border-solid rounded-sm text-center p-3 text-2xl">
+                Stack
               </div>
+              <div className="border-2 border-solid rounded-sm text-center p-3 text-2xl">
+                Stack
+              </div>
+              <div className="border-2 border-solid rounded-sm text-center p-3 text-2xl">
+                Stack
+              </div>
+              
+              <div className="border-2 border-solid rounded-sm text-center p-3 text-2xl">
+                Heap
+              </div>
+              <div className="border-2 border-solid rounded-sm text-center p-3 text-2xl">
+                Heap
+              </div>
+              <div className="border-2 border-solid rounded-sm text-center p-3 text-2xl">
+                Heap
+              </div>
+              <div className="border-2 border-solid rounded-sm text-center p-3 text-2xl">
+                Text
+              </div>
+            </div>
               <div className="grid gap-3">
                 <Label htmlFor="tabs-demo-username">Username</Label>
                 <Input id="tabs-demo-username" defaultValue="@peduarte" />
@@ -50,7 +64,7 @@ export function TabsDemo() {
             </CardFooter>
           </Card>
         </TabsContent>
-        <TabsContent value="password">
+        <TabsContent value="2">
           <Card>
             <CardHeader>
               <CardTitle>Password</CardTitle>
